@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ptGraph"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gxl/CLionProjects/ptGraph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/gxl/CLionProjects/ptGraph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gxl/CLionProjects/ptGraph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ptGraph">
+				<Option output="/home/gxl/CLionProjects/ptGraph/cmake-build-debug/ptGraph" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gxl/CLionProjects/ptGraph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 ptGraph"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ptGraph/fast">
+				<Option output="/home/gxl/CLionProjects/ptGraph/cmake-build-debug/ptGraph" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gxl/CLionProjects/ptGraph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 ptGraph/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/gxl/CLionProjects/ptGraph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gxl/CLionProjects/ptGraph/bfs-sync.hpp">
+			<Option target="ptGraph"/>
+		</Unit>
+		<Unit filename="/home/gxl/CLionProjects/ptGraph/gpu_kernels.cu">
+			<Option target="ptGraph"/>
+		</Unit>
+		<Unit filename="/home/gxl/CLionProjects/ptGraph/gpu_kernels.cuh">
+			<Option target="ptGraph"/>
+		</Unit>
+		<Unit filename="/home/gxl/CLionProjects/ptGraph/main.cu">
+			<Option target="ptGraph"/>
+		</Unit>
+		<Unit filename="/home/gxl/CLionProjects/ptGraph/range.hpp">
+			<Option target="ptGraph"/>
+		</Unit>
+		<Unit filename="/home/gxl/CLionProjects/ptGraph/tools.hpp">
+			<Option target="ptGraph"/>
+		</Unit>
+		<Unit filename="/home/gxl/CLionProjects/ptGraph/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

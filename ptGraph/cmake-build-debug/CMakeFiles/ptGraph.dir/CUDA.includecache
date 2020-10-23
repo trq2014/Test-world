@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gxl/CLionProjects/ptGraph/globals.cuh
+
+/home/gxl/CLionProjects/ptGraph/gpu_kernels.cuh
+range.hpp
+/home/gxl/CLionProjects/ptGraph/range.hpp
+globals.cuh
+/home/gxl/CLionProjects/ptGraph/globals.cuh
+
+/home/gxl/CLionProjects/ptGraph/main.cu
+iostream
+-
+chrono
+-
+fstream
+-
+math.h
+-
+gpu_kernels.cuh
+/home/gxl/CLionProjects/ptGraph/gpu_kernels.cuh
+thrust/host_vector.h
+-
+thrust/device_vector.h
+-
+thrust/functional.h
+-
+thrust/sort.h
+-
+algorithm
+-
+thread
+-
+
+/home/gxl/CLionProjects/ptGraph/range.hpp
+iterator
+-
+type_traits
+-
+

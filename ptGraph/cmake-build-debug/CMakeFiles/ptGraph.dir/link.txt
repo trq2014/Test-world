@@ -1,0 +1,1 @@
+/usr/bin/g++  CMakeFiles/ptGraph.dir/main.cu.o CMakeFiles/ptGraph.dir/gpu_kernels.cu.o CMakeFiles/ptGraph.dir/cmake_device_link.o -o ptGraph  -lcublas -lcurand -lcudadevrt -lcudart_static  -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib" -lrt -lpthread -ldl

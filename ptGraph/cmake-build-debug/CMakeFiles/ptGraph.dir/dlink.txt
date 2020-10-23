@@ -1,0 +1,1 @@
+/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -g -Xcompiler=-fPIC -Wno-deprecated-gpu-targets -shared -dlink CMakeFiles/ptGraph.dir/main.cu.o CMakeFiles/ptGraph.dir/gpu_kernels.cu.o -o CMakeFiles/ptGraph.dir/cmake_device_link.o  -lcublas -lcurand -lcudadevrt -lcudart_static 
