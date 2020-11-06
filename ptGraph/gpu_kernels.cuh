@@ -49,6 +49,10 @@ __global__ void
 bfs_kernelStaticSwap(uint nodeNum, uint *activeNodesD, uint *nodePointersD, uint *degreeD, uint *edgeListD,
                      uint *valueD,
                      uint *labelD, bool *isInD);
+__global__ void
+bfs_kernelStaticSwap(uint nodeNum, uint *activeNodesD, uint *nodePointersD, uint *degreeD, uint *edgeListD,
+                     uint *valueD,
+                     uint *labelD, bool *isInD, uint* fragmentRecordsD, uint fragment_size);
 
 __global__ void
 bfs_kernelDynamic(uint activeNum, uint *activeNodesD, uint *degreeD, uint *valueD,
@@ -115,3 +119,6 @@ setFragmentData(uint activeNodeNum, uint *activeNodeList, uint *staticNodePointe
 __global__ void
 setStaticFragmentData(uint staticFragmentNum, uint *canSwapFragmentD, uint *canSwapFragmentPrefixD,
                 uint *staticFragmentDataD);
+
+__global__ void
+setFragmentDataOpt(uint *staticFragmentData, uint staticFragmentNum, uint* staticFragmentVisitRecordsD);

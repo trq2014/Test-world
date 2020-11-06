@@ -250,6 +250,37 @@ bfs_kernelStaticSwap(uint nodeNum, uint *activeNodesD, uint *nodePointersD, uint
     });
 }
 
+
+__global__ void
+bfs_kernelStaticSwap(uint nodeNum, uint *activeNodesD, uint *nodePointersD, uint *degreeD, uint *edgeListD,
+                     uint *valueD,
+                     uint *labelD, bool *isInD, uint* fragmentRecordsD, uint fragment_size) {
+    streamVertices(nodeNum, [&](uint index) {
+        uint id = activeNodesD[index];
+        if (isInD[id]) {
+            uint edgeIndex = nodePointersD[id];
+            uint sourceValue = valueD[id];
+            uint finalValue;
+            uint fragmentIndex = edgeIndex / fragment_size;
+            uint fragmentMoreIndex = (edgeIndex + degreeD[id]) / fragment_size;
+            if (fragmentMoreIndex > fragmentIndex) {
+                atomicAdd(&fragmentRecordsD[fragmentIndex], fragmentIndex * fragment_size + fragment_size - edgeIndex);
+            } else {
+                atomicAdd(&fragmentRecordsD[fragmentIndex], degreeD[id]);
+            }
+            for (uint i = 0; i < degreeD[id]; i++) {
+                finalValue = sourceValue + 1;
+                uint vertexId;
+                vertexId = edgeListD[edgeIndex + i];
+                if (finalValue < valueD[vertexId]) {
+                    atomicMin(&valueD[vertexId], finalValue);
+                    labelD[vertexId] = 1;
+                }
+            }
+        }
+    });
+}
+
 /*__global__ void
 bfs_kernelDynamic(uint activeNum, uint *activeNodesD, uint *degreeD, uint *valueD,
                   uint *labelD, uint overloadNode, uint *overloadEdgeListD,
@@ -437,6 +468,19 @@ setStaticFragmentData(uint staticFragmentNum, uint *canSwapFragmentD, uint *canS
         if (canSwapFragmentD[index] > 0) {
             staticFragmentDataD[canSwapFragmentPrefixD[index]] = index;
             canSwapFragmentD[index] = 0;
+        }
+    });
+}
+
+__global__ void
+setFragmentDataOpt(uint *staticFragmentData, uint staticFragmentNum, uint* staticFragmentVisitRecordsD) {
+    streamVertices(staticFragmentNum, [&](uint index) {
+        uint fragmentId = index;
+        if (staticFragmentVisitRecordsD[fragmentId] > 3600) {
+            staticFragmentData[fragmentId] = 1;
+            staticFragmentVisitRecordsD[fragmentId] = 0;
+        } else {
+            staticFragmentData[fragmentId] = 0;
         }
     });
 }
